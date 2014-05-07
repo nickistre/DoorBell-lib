@@ -20,17 +20,6 @@ void loadBufferLine()
   buffer[bytesRead] = char(0); // Make sure null terminator is setup.  
 }
 
-
-void showHelpInfo() {
-  printf_P(PSTR("The following commands are avaiable: \r\n"));
-  
-  printf_P(PSTR(" HELP\r\n"));
-  printf_P(PSTR(" SET NODE ADDRESS\r\n"));
-  printf_P(PSTR(" RESET\r\n"));
-  
-  printf_P(PSTR("\r\n"));
-}
-
 void handleUpdateNodeAddress() {
   // Wait until serial data is available.
   printf_P(PSTR("CHANGE NODE ADDRESS\r\n \r\n"));
@@ -72,6 +61,17 @@ void handleReset() {
   resetFunc();
 }
 
+
+
+void showHelpInfo() {
+  printf_P(PSTR("The following commands are avaiable: \r\n"));
+  
+  printf_P(PSTR(" HELP\r\n"));
+  printf_P(PSTR(" SET NODE ADDRESS\r\n"));
+  printf_P(PSTR(" RESET\r\n"));
+  
+  printf_P(PSTR("\r\n"));
+}
 
 void checkSerial() {
   // Check serial connection for any new commands
