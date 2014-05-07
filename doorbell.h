@@ -14,7 +14,10 @@ struct payload_echo {
   char * text;
 };
 
-typedef enum DoorType{BACK, FRONT} DoorType;
+typedef enum DoorType{
+  BACK=0, 
+  FRONT=1
+} DoorType;
 struct payload_button_press {
   DoorType door;
 };
